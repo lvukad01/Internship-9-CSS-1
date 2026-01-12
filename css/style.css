@@ -1,0 +1,89 @@
+/* GLOBAL */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+.logo{
+  size:35px
+}
+/* ANNOUNCEMENT BAR */
+.announcement {
+  background: #f5f5f5;
+  padding: 5px 10px;
+  font-size: 14px;
+}
+
+.announcement a {
+  margin-right: 30px;
+  color: #000;
+  text-decoration: none;
+}
+
+/* HEADER */
+.header {
+  border-bottom: 1px solid #ddd;
+}
+
+/* GORNJI RED HEADERA */
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+/* SEARCH BAR */
+.search-bar {
+  display: flex;
+  align-items: center;
+}
+
+.search-bar input {
+  padding: 5px 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px 0 0 4px;
+}
+
+.search-bar button {
+  border: 1px solid #ccc;
+  border-left: none;
+  background: #fff;
+  padding: 5px;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+}
+
+/* LOGO */
+.logo a {
+  font-size: 24px;
+  font-weight: bold;
+  color: #000;
+  text-decoration: none;
+}
+
+/* HEADER ICONS */
+.header-icons a {
+  margin-left: 15px;
+  color: #000;
+  text-decoration: none;
+}
+
+/* NAVIGATION */
+.nav {
+  display: flex;
+  justify-content: center;
+  background: #fff;
+  padding: 10px 0;
+}
+
+.nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+}

@@ -1,114 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MUJI Europe | Replica</title>
-
-  <link rel="stylesheet" href="css/reset.css" />
-  <link rel="stylesheet" href="css/style.css" />
-
-  <!-- Ikonice -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
 
-  <!-- Announcement bar -->
+  <!-- ANNOUNCEMENT BAR -->
   <div class="announcement">
     <marquee>
-      無印良品 MUJI Europe — Free delivery on orders over €80
+      <a href="#">Holiday Extended Return Policy</a>
+      <a href="#">We ship to most EU countries, Switzerland and Norway</a>
+      <a href="#">Refer-A-Friend Rewards</a>
+      <a href="#">Sale - Up to 50% off selected lines</a>
     </marquee>
   </div>
 
-  <!-- Header -->
+  <!-- HEADER -->
   <header class="header">
-    <div class="header-inner">
 
-      <div class="logo">
-        <a href="#">MUJI</a>
+    <!-- GORNJI RED: search / logo / icons -->
+    <div class="header-top">
+      
+      <!-- SEARCH -->
+      <div class="search-bar">
+        <input type="text" placeholder="Search">
+        <button>
+          <svg width="16" height="16" viewBox="0 0 24 24">
+            <circle cx="10" cy="10" r="7" stroke="currentColor" stroke-width="2" fill="none"></circle>
+            <line x1="15" y1="15" x2="21" y2="21" stroke="currentColor" stroke-width="2"></line>
+          </svg>
+        </button>
       </div>
+      <img class="logo" src="https://cdn11.bigcommerce.com/s-36unquhwg5/stencil/e694ebc0-be15-013e-5bca-1ef4e2705301/img/logos/logo-inline-black.svg" alt="Muji Logo" width="200" height="30">
+      <!-- LOGO -->
 
-      <nav class="nav">
-        <a href="#">New</a>
-        <a href="#">Furniture</a>
-        <a href="#">Home</a>
-        <a href="#">Clothing</a>
-        <a href="#">Stationery</a>
-        <a href="#">Food</a>
-      </nav>
 
+      <!-- HEADER ICONS -->
       <div class="header-icons">
-        <i class="fa-solid fa-magnifying-glass"></i>
-        <i class="fa-regular fa-user"></i>
-        <i class="fa-solid fa-bag-shopping"></i>
-      </div>
-
-      <div class="hamburger">
-        <i class="fa-solid fa-bars"></i>
+        <!-- Wishlist -->
+        <a href="#">
+          <svg width="20" height="20" viewBox="0 0 24 24">
+            <path d="M12 21s-8-7-8-12c0-3 2-5 4-5s3 2 4 3 2-3 4-3 4 2 4 5c0 5-8 12-8 12z" fill="none" stroke="currentColor" stroke-width="2"/>
+          </svg>
+        </a>
+        <!-- User -->
+        <a href="#">
+          <svg width="20" height="20" viewBox="0 0 24 24">
+            <circle cx="12" cy="7" r="4" fill="none" stroke="currentColor" stroke-width="2"/>
+            <path d="M4 21v-2a8 8 0 0 1 16 0v2" fill="none" stroke="currentColor" stroke-width="2"/>
+          </svg>
+        </a>
+        <!-- Cart -->
+        <a href="#">
+          <svg width="20" height="20" viewBox="0 0 24 24">
+            <path d="M6 6h15l-1.5 9h-13z" fill="none" stroke="currentColor" stroke-width="2"/>
+            <circle cx="9" cy="21" r="1.5" fill="currentColor"/>
+            <circle cx="18" cy="21" r="1.5" fill="currentColor"/>
+          </svg>
+        </a>
       </div>
 
     </div>
-  </header>
 
-  <main>
-
-    <!-- Highlights -->
-    <section class="highlights">
-      <a href="#">Living Room</a>
-      <a href="#">Bedroom</a>
-      <a href="#">Storage</a>
-      <a href="#">Office</a>
+    <!-- DONJI RED: NAVIGATION -->
+    <nav class="nav">
+      <a href="#">Sale</a>
+      <a href="#">Women</a>
+      <a href="#">Men</a>
+      <a href="#">Homeware</a>
+      <a href="#">Furniture</a>
+      <a href="#">Stationery</a>
+      <a href="#">Beauty</a>
       <a href="#">Travel</a>
-    </section>
+      <a href="#">Gift</a>
+    </nav>
 
-    <!-- Hero -->
-    <section class="hero">
-      <div class="hero-content">
-        <h1>Simple. Natural. Quality.</h1>
-        <a href="#" class="btn">Explore best sellers</a>
-      </div>
-    </section>
-
-    <!-- Products (choose one section) -->
-    <section class="products">
-      <h2>Most popular products</h2>
-
-      <div class="product-grid">
-        <div class="product-card">
-          <img src="assets/images/product1.jpg" alt="">
-          <img class="hover-img" src="assets/images/product1-hover.jpg" alt="">
-          <p>Oak Chair</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Seasonal selection -->
-    <section class="seasonal">
-      <a href="#"><img src="assets/images/season1.jpg"></a>
-      <a href="#"><img src="assets/images/season2.jpg"></a>
-      <a href="#"><img src="assets/images/season3.jpg"></a>
-    </section>
-
-    <!-- MUJI Stories -->
-    <section class="stories">
-      <article>
-        <img src="assets/images/story1.jpg">
-        <h3>MUJI Philosophy</h3>
-      </article>
-    </section>
-
-  </main>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="footer-columns">
-      <div>
-        <h4>About MUJI</h4>
-        <a href="#">Company</a>
-        <a href="#">Sustainability</a>
-      </div>
-    </div>
-  </footer>
+  </header>
 
 </body>
 </html>
