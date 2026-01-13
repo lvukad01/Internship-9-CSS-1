@@ -1,21 +1,20 @@
 /* GLOBAL */
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family:Avenir Next, Helvetica, Arial, sans-serif;
+  color: #3c3b3b;
 }
-.logo{
-  size:35px
-}
+
 /* ANNOUNCEMENT BAR */
 .announcement {
-  background: #f5f5f5;
+  background: #3c3b3b;
   padding: 5px 10px;
   font-size: 14px;
 }
 
 .announcement a {
-  margin-right: 30px;
-  color: #000;
+  margin-right: 200px;
+  color:white;
   text-decoration: none;
 }
 
@@ -39,19 +38,24 @@ body {
 }
 
 .search-bar input {
-  padding: 5px 10px;
-  font-size: 14px;
-  border: 1px solid #ccc;
+  padding: 10px 10px;
+  font-size: 16px;
+  border: white;
   border-radius: 4px 0 0 4px;
 }
 
 .search-bar button {
-  border: 1px solid #ccc;
+  border:  white;
   border-left: none;
   background: #fff;
   padding: 5px;
-  border-radius: 0 4px 4px 0;
+  border-radius: 0 6px 6px 0;
   cursor: pointer;
+}
+.search-bar button svg {
+    width: 24px;
+    height: 24px;
+    color: #3c3b3b;
 }
 
 /* LOGO */
@@ -65,8 +69,12 @@ body {
 /* HEADER ICONS */
 .header-icons a {
   margin-left: 15px;
-  color: #000;
+  color: #3c3b3b;
   text-decoration: none;
+}
+svg{
+  height:18px;
+  width:18px;
 }
 
 /* NAVIGATION */
@@ -79,11 +87,99 @@ body {
 
 .nav a {
   margin: 0 15px;
+  color: #3c3b3b;
   text-decoration: none;
-  color: #000;
   font-weight: 500;
 }
 
 .nav a:hover {
   text-decoration: underline;
+}
+
+.sale-section {
+  background: #d7b48a;
+  padding: 150px 0; /* ↑ gore/dolje | ← lijevo/desno */
+}
+
+.sale-inner {
+  margin: 0 auto;
+  display: flex;
+  gap: 90px;
+}
+
+.sale-text-container {
+  color: #8b0000;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: left;
+  padding-left: 70px;
+}
+
+/* SALE */
+.sale-title-text {
+  font-size: 40px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin: 0;
+  line-height: 1.2;
+}
+
+/* UP TO */
+.sale-sub-text {
+  font-size: 18px;
+  margin: 4px 0;
+  line-height: 1.2;
+}
+
+/* 50% OFF */
+.sale-promo-text {
+  font-size: 70px;
+  font-weight: 700;
+  margin: 4px 0;
+  line-height: 1;
+}
+
+/* NEW LINES ADDED */
+.sale-note-text {
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-weight: normal;
+  margin-top: 6px;
+  line-height: 1.2;
+}
+
+
+/* IMAGES */
+.sale-images {
+
+  flex: 2;
+  display: flex;
+  gap: 20px;
+}
+
+.sale-item {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  color: #fff;
+}
+
+.sale-item img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+}
+
+.sale-item span {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  font-weight: bold;
+}
+
+/* HOVER */
+.sale-item:hover img {
+  opacity: 0.9;
+  cursor: pointer;
 }
