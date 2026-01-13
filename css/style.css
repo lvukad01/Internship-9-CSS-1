@@ -17,7 +17,13 @@ body {
   color:white;
   text-decoration: none;
 }
-
+.logo{
+  width:200px;
+  height:30px;
+}
+.menu{
+  display:none;
+}
 /* HEADER */
 .header {
   border-bottom: 1px solid #ddd;
@@ -183,4 +189,77 @@ svg{
 .sale-item:hover img {
   opacity: 0.9;
   cursor: pointer;
+}
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+  /* hamburger menu lijevo */
+  .menu {
+    display: block;
+    flex: 1;
+    text-align: left;
+    font-size: 24px;
+    padding: 0; 
+    padding-left:10px; 
+    margin: 0;       /* makni margin */
+  }
+
+  /* header-top bez ikakvih unutarnjih prostora */
+  .header-top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;      /* makni padding */
+    margin: 0;       /* makni margin */
+  }
+
+  /* Logo centar, bez dodatnog paddinga */
+  .logo {
+    text-align: center;
+    width: auto;     /* ili koliko treba za logo */
+    height: auto;
+    padding: 0;
+    margin: 0 auto;  /* centriranje */
+  }
+
+  /* Ikone desno */
+  .header-icons {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    padding: 0;
+    padding-right: 10px;
+    margin: 0;
+  }
+
+  /* Sakrij user/human ikonu */
+  .icon-user, .human-icon {
+    display: none;
+  }
+
+  /* Search bar ispod, centrirano */
+  .header-top .search-bar {
+    flex-basis: 100%;
+    order: 2;
+    display: flex;
+    justify-content: center;
+    margin: 0;      /* makni margin-top */
+    padding: 0;
+  }
+
+  .header-top .search-bar input {
+    width: 85%;
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .header-top .search-bar button {
+    padding: 8px;
+  }
+
+  /* sakrij navigaciju */
+  .nav {
+    display: none;
+  }
 }
