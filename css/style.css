@@ -1,11 +1,9 @@
-/* GLOBAL */
 body {
   margin: 0;
   font-family:Avenir Next, Helvetica, Arial, sans-serif;
   color: #3c3b3b;
 }
 
-/* ANNOUNCEMENT BAR */
 .announcement {
   background: #3c3b3b;
   padding: 5px 10px;
@@ -20,16 +18,19 @@ body {
 .logo{
   width:200px;
   height:30px;
+  margin-right: 100px;
 }
 .menu{
   display:none;
 }
-/* HEADER */
 .header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
   border-bottom: 1px solid #ddd;
+  background: white;
 }
 
-/* GORNJI RED HEADERA */
 .header-top {
   display: flex;
   justify-content: space-between;
@@ -37,7 +38,6 @@ body {
   padding: 10px 20px;
 }
 
-/* SEARCH BAR */
 .search-bar {
   display: flex;
   align-items: center;
@@ -64,7 +64,6 @@ body {
     color: #3c3b3b;
 }
 
-/* LOGO */
 .logo a {
   font-size: 24px;
   font-weight: bold;
@@ -72,7 +71,6 @@ body {
   text-decoration: none;
 }
 
-/* HEADER ICONS */
 .header-icons a {
   margin-left: 15px;
   color: #3c3b3b;
@@ -83,7 +81,6 @@ svg{
   width:18px;
 }
 
-/* NAVIGATION */
 .nav {
   display: flex;
   justify-content: center;
@@ -104,7 +101,7 @@ svg{
 
 .sale-section {
   background: #d7b48a;
-  padding: 150px 0; /* ↑ gore/dolje | ← lijevo/desno */
+  padding: 150px 0; 
 }
 
 .sale-inner {
@@ -121,7 +118,6 @@ svg{
   padding-left: 70px;
 }
 
-/* SALE */
 .sale-title-text {
   font-size: 40px;
   font-weight: 600;
@@ -129,15 +125,19 @@ svg{
   margin: 0;
   line-height: 1.2;
 }
-
-/* UP TO */
+.sale-text {
+  font-size: 40px;      
+  font-weight: normal;
+  margin: 0;
+  line-height: 1.2;
+  letter-spacing: 1px;
+}
 .sale-sub-text {
   font-size: 18px;
   margin: 4px 0;
   line-height: 1.2;
 }
 
-/* 50% OFF */
 .sale-promo-text {
   font-size: 100px;
   font-weight: 700;
@@ -145,7 +145,6 @@ svg{
   line-height: 1;
 }
 
-/* NEW LINES ADDED */
 .sale-note-text {
   font-size: 14px;
   letter-spacing: 1px;
@@ -155,12 +154,11 @@ svg{
 }
 
 
-/* IMAGES */
 .sale-images {
 
   flex: 2;
   display: flex;
-  justify-content: flex-end; /* slike s desne strane */
+  justify-content: flex-end; 
   gap: 10px;
 }
 
@@ -185,14 +183,11 @@ svg{
   font-weight: bold;
 }
 
-/* HOVER */
 .sale-item:hover img {
   opacity: 0.9;
   cursor: pointer;
 }
-/* MOBILE RESPONSIVE */
 @media (max-width: 768px) {
-  /* hamburger menu lijevo */
   .menu {
     display: block;
     flex: 1;
@@ -200,29 +195,26 @@ svg{
     font-size: 24px;
     padding: 0; 
     padding-left:10px; 
-    margin: 0;       /* makni margin */
+    margin: 0;      
   }
 
-  /* header-top bez ikakvih unutarnjih prostora */
   .header-top {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    padding: 0;      /* makni padding */
-    margin: 0;       /* makni margin */
+    padding: 0;      
+    margin: 0;      
   }
 
-  /* Logo centar, bez dodatnog paddinga */
   .logo {
     text-align: center;
-    width: auto;     /* ili koliko treba za logo */
+    width: auto;     
     height: auto;
     padding: 0;
-    margin: 0 auto;  /* centriranje */
+    margin: 0 auto;
   }
 
-  /* Ikone desno */
   .header-icons {
     flex: 1;
     display: flex;
@@ -233,18 +225,16 @@ svg{
     margin: 0;
   }
 
-  /* Sakrij user/human ikonu */
   .icon-user, .human-icon {
     display: none;
   }
 
-  /* Search bar ispod, centrirano */
   .header-top .search-bar {
     flex-basis: 100%;
     order: 2;
     display: flex;
     justify-content: center;
-    margin: 0;      /* makni margin-top */
+    margin: 0;    
     padding: 0;
   }
 
@@ -258,8 +248,114 @@ svg{
     padding: 8px;
   }
 
-  /* sakrij navigaciju */
   .nav {
     display: none;
+  }
+  .sale-section {
+    padding: 50px 0;
+  }
+  .sale-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  .sale-text-container {
+    width: 100%;         
+    text-align: left;     
+    padding: 10px 15px;   
+    margin-bottom: 15px;  
+    color: #8b0000;       
+  }
+
+  .sale-title-text {
+    font-size: 28px;      
+
+  }
+  .sale-text {
+    font-size: 28px;      
+  }
+  .sale-sub-text {
+    font-size: 16px;   
+    margin: 4px 0;
+  }
+
+  .sale-promo-text {
+    font-size: 52px;     
+    font-weight: 700;
+    margin: 4px 0;
+    line-height: 1;
+  }
+
+  .sale-images-wrapper{
+    box-sizing: border-box;
+    cursor: auto;
+    display: block;
+    line-height:24px;
+    font-size: 16px;
+    margin:0;
+    padding:0;
+    position: relative;
+    unicode-bidi: isolate;
+    -webkit-font-smoothing: antialiased;
+    width:400px;
+    height:370px;
+  }
+  .sale-images {
+    box-sizing: border-box;
+    column-gap: 8px;
+    display: flex;
+    flex-wrap: nowrap;  
+    margin:0;
+    padding:0;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    justify-content: flex-start;
+    width:400px;
+    height: 370px;
+    gap: 0;
+  }
+
+  .sale-images::-webkit-scrollbar {
+    display: none;
+  }
+
+  .sale-item {
+    width: 296px;
+    height: 370px;
+    padding: 5px;
+    flex-basis: 74%;
+    position: relative;
+    scroll-snap-align: start;
+    text-decoration: none;
+  }
+  .sale-item a{
+    width: 296px;
+    height: 370px;
+    padding: 5px;
+    flex-basis: 74%;
+    position: relative;
+    scroll-snap-align: start;
+    text-decoration: none;
+    }
+  .sale-item img {
+    width: 296px;
+    height: 370px;
+    object-fit: cover;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .sale-item span {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 22px;
+    font-weight: 600;
+    color: #fff;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.6);
   }
 }
