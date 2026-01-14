@@ -201,119 +201,107 @@ svg{
   opacity: 1;
   cursor: pointer;
 }
-.carousel-wrapper {
-  display: flex;
-  justify-content: flex-start;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  scroll-behavior: auto;
-  gap: 0.5rem;
-  padding-bottom: 0.5rem;
-  cursor: grab;
-  user-select: none;
-  position: relative;
+.highlights {
+  padding: 2rem 0;
 }
 
-/* Cards inside carousel */
-.carousel-wrapper > a.card {
+.highlights-header {
+  display: flex;
+  font-size: 20px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.5rem;
+  padding-left:56px;
+  margin-bottom: 0;
+}
+
+.highlights-arrows {
+  display: flex;
+  gap: 1rem;
+}
+
+.highlights-arrows .arrow {
+  font-size: 1.6rem;
+  color: #3c3b3b;
+  cursor: pointer;
+  user-select: none;
+  line-height: 1;
+  transition: opacity 0.3s ease;
+}
+
+.highlights-arrows .arrow:hover {
+  opacity: 0.5;
+}
+
+
+
+.hightlights-carousel {
+  display: flex;
+  gap: 0.75rem;
+  overflow-x: auto;
+  padding:0 0 1.5rem;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+
+.hightlights-carousel {
+  display: flex;
+  gap: 1px;
+  padding-left: 56px; 
+  overflow-x: scroll;
+}
+
+.hightlights-carousel a {
   flex: 0 0 auto;
-  width: calc((100vmax - 2.5rem)/4);
+  width: calc((100vw - 4.5rem) / 4);
   max-width: 460px;
   text-decoration: none;
   color: inherit;
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: flex-start;
 }
 
-/* Images inside card */
-.carousel-wrapper > a.card img {
-  width: 100%;
-  height: auto;
-  display: block;
-  aspect-ratio: 1/1;
+.hightlights-carousel img {
+  width: 210px;
+  padding: 0;
+  margin:0;
+  height: 210px;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
-  transition: all 0.3s ease-in-out;
+  display: block;
+  transition: transform 0.4s ease;
 }
 
-/* Hover effect on image */
-.carousel-wrapper > a.card:hover img {
-  transform: scale(1.01);
-  transition: all 0.4s ease-in-out;
+/* Hover zoom */
+.hightlights-carousel a:hover img {
+  transform: scale(1.02);
 }
 
-/* Text under image with hover underline animation */
-.carousel-wrapper > a.card p {
+/* Tekst ispod slike */
+.hightlights-carousel p {
   position: relative;
-  display: inline-block;
-  font-size: clamp(0.9rem,1vmax,1rem);
-  margin: 0.6rem 0;
-  font-weight: bold;
-  color: inherit;
-  text-decoration: none;
+  margin: 0.6rem 0 0;
+  font-size: 1rem;
+  font-weight: 600;
 }
 
-.carousel-wrapper > a.card p::after {
+/* MUJI underline hover */
+.hightlights-carousel p::after {
   content: '';
   position: absolute;
   left: 0;
-  bottom: -0.3rem;
+  bottom: -0.35rem;
   width: 100%;
   height: 3px;
   background-color: #7f0019;
-  transition: transform 0.4s ease;
   transform: scaleX(0);
   transform-origin: left;
+  transition: transform 0.4s ease;
 }
 
-.carousel-wrapper > a.card:hover p::after {
+.hightlights-carousel a:hover p::after {
   transform: scaleX(1);
-}
-
-/* Carousel scrollbar hidden */
-.carousel-wrapper::-webkit-scrollbar {
-  display: none;
-}
-.arrow {
-  background: rgba(255,255,255,0.8);
-  text-decoration: none;
-  font-size: 1.5rem;
-  padding: 0.2rem 0.5rem;
-  border-radius: 4px;
-  transition: background 0.3s;
-}
-
-.arrow:hover {
-  background: rgba(255,255,255,1);
-}
-.swipecarousel-arrow {
-  position: absolute;
-  top: 50%;
-  right: 1rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  transform: translateY(-50%);
-  z-index: 10;
-}
-
-.swipecarousel-arrow a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 40px;
-  height: 40px;
-  background-color: rgba(0,0,0,0.5);
-  color: #fff;
-  font-size: 1.5rem;
-  border-radius: 50%;
-  text-decoration: none;
-  transition: background 0.3s, transform 0.2s;
-}
-
-.swipecarousel-arrow a:hover {
-  background-color: rgba(0,0,0,0.8);
-  transform: scale(1.1);
 }
 @media (max-width: 768px) {
   .menu {
@@ -493,6 +481,25 @@ svg{
     letter-spacing: 1px;
     text-shadow: 0 2px 8px rgba(0,0,0,0.6);
   }
+  .highlights-header {
+    padding-left: 20px;
+  }
+  .hightlights-carousel{
+    padding-left: 20px;
+  }
+    .hightlights-carousel a {
+    width: 75vw;
+  }
+  .hightlights-carousel img {
+  width: 260px;
+  padding: 0;
+  margin:0;
+  height: 260px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+ }
 }
 
 @media screen and (max-width: 764px) {
