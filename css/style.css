@@ -201,6 +201,120 @@ svg{
   opacity: 1;
   cursor: pointer;
 }
+.carousel-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: auto;
+  gap: 0.5rem;
+  padding-bottom: 0.5rem;
+  cursor: grab;
+  user-select: none;
+  position: relative;
+}
+
+/* Cards inside carousel */
+.carousel-wrapper > a.card {
+  flex: 0 0 auto;
+  width: calc((100vmax - 2.5rem)/4);
+  max-width: 460px;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+/* Images inside card */
+.carousel-wrapper > a.card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hover effect on image */
+.carousel-wrapper > a.card:hover img {
+  transform: scale(1.01);
+  transition: all 0.4s ease-in-out;
+}
+
+/* Text under image with hover underline animation */
+.carousel-wrapper > a.card p {
+  position: relative;
+  display: inline-block;
+  font-size: clamp(0.9rem,1vmax,1rem);
+  margin: 0.6rem 0;
+  font-weight: bold;
+  color: inherit;
+  text-decoration: none;
+}
+
+.carousel-wrapper > a.card p::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -0.3rem;
+  width: 100%;
+  height: 3px;
+  background-color: #7f0019;
+  transition: transform 0.4s ease;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.carousel-wrapper > a.card:hover p::after {
+  transform: scaleX(1);
+}
+
+/* Carousel scrollbar hidden */
+.carousel-wrapper::-webkit-scrollbar {
+  display: none;
+}
+.arrow {
+  background: rgba(255,255,255,0.8);
+  text-decoration: none;
+  font-size: 1.5rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+
+.arrow:hover {
+  background: rgba(255,255,255,1);
+}
+.swipecarousel-arrow {
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.swipecarousel-arrow a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(0,0,0,0.5);
+  color: #fff;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.swipecarousel-arrow a:hover {
+  background-color: rgba(0,0,0,0.8);
+  transform: scale(1.1);
+}
 @media (max-width: 768px) {
   .menu {
     display: block;
@@ -378,5 +492,17 @@ svg{
     color: #fff;
     letter-spacing: 1px;
     text-shadow: 0 2px 8px rgba(0,0,0,0.6);
+  }
+}
+
+@media screen and (max-width: 764px) {
+  .carousel-wrapper > a.card {
+    width: calc(75vw - 1rem);
+  }
+}
+
+@media screen and (min-width: 764px) and (orientation: portrait) {
+  .carousel-wrapper > a.card {
+    width: calc((100vw / 3) - 1rem);
   }
 }
