@@ -92,6 +92,13 @@
   .mini-carousel-feat { aspect-ratio: 3 / 4; }
   .desktop-only-mini { display: none; }
   .mobile-only-mini { display: block; }
+  .mini-carousel-feat {
+    position: relative;
+    overflow: hidden;
+    max-width: 360px; 
+    margin: 2rem auto; 
+    height: 480px; 
+    }
 }
 
 
