@@ -4,7 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MUJI Europe | Replica</title>
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/sale.css">
+  <link rel="stylesheet" href="css/highlights.css">
+  <link rel="stylesheet" href="css/hero.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
 </head>
 <body>
 
@@ -72,15 +79,15 @@
         </div>
     </div>
     <nav class="nav">
-      <a href="#">Sale</a>
-      <a href="#">Women</a>
-      <a href="#">Men</a>
-      <a href="#">Homeware</a>
-      <a href="#">Furniture</a>
-      <a href="#">Stationery</a>
-      <a href="#">Beauty</a>
-      <a href="#">Travel</a>
-      <a href="#">Gift Guide</a>
+      <a href="https://www.muji.eu/sale/markdown">Sale</a>
+      <a href="https://www.muji.eu/women">Women</a>
+      <a href="https://www.muji.eu/men">Men</a>
+      <a href="https://www.muji.eu/home">Homeware</a>
+      <a href="https://www.muji.eu/furniture">Furniture</a>
+      <a href="https://www.muji.eu/stationery">Stationery</a>
+      <a href="https://www.muji.eu/beauty">Beauty</a>
+      <a href="https://www.muji.eu/travel">Travel</a>
+      <a href="https://www.muji.eu/gifts">Gift Guide</a>
     </nav>
 
   </header>
@@ -115,55 +122,104 @@
         </div>
       </div>
     </section>
-<section class="highlights">
-    <div class="highlights-header">
-      <h4>Highlights</h4>
+    <section class="highlights">
+        <div class="highlights-header">
+          <h4>Highlights</h4>
 
-      <div class="highlights-arrows">
-        <span class="arrow">&#8592;</span>
-        <span class="arrow">&#8594;</span>
+          <div class="highlights-arrows">
+            <span class="arrow">&#8592;</span>
+            <span class="arrow">&#8594;</span>
+          </div>
+        </div>
+        <div class="hightlights-carousel">
+
+          <a href="https://www.muji.eu/stationery/organisation/diaries-planners-and-calendars" class="highlight-card">
+            <img src="https://cdn11.bigcommerce.com/s-4b0oh2xvlj/images/stencil/original/image-manager/25aw-new-arrivals-diaries-781x1080-01.jpg" alt="2026 Diaries & Calendars">
+            <p>2026 Diaries &amp; Calendars</p>
+          </a>
+
+          <a href="https://www.muji.eu/home/cooking-and-dining" class="highlight-card">
+            <img src="https://cdn11.bigcommerce.com/s-4b0oh2xvlj/images/stencil/original/image-manager/26ss-cooking-dining-freezer-bags-864x864-.jpg?t=1768237765" alt="Cooking & Dining">
+            <p>Cooking &amp; Dining</p>
+          </a>
+
+          <a href="https://www.muji.eu/home/storage" class="highlight-card">
+            <img src="https://cdn11.bigcommerce.com/s-4b0oh2xvlj/images/stencil/original/image-manager/25aw-storage-864x864-01.jpg?t=1765902369" alt="Storage">
+            <p>Storage</p>
+          </a>
+
+          <a href="https://www.muji.eu/home/utility/cleaning" class="highlight-card">
+            <img src="https://cdn11.bigcommerce.com/s-4b0oh2xvlj/images/stencil/original/image-manager/cleaning-system-1920x1080-.jpg" alt="Cleaning System" style="object-position:20% 20%">
+            <p>Cleaning System</p>
+          </a>
+
+          <a href="https://www.muji.eu/furniture/shelving-units" class="highlight-card">
+            <img src="https://cdn11.bigcommerce.com/s-4b0oh2xvlj/images/stencil/original/image-manager/25aw-shelving-unit-864x864-01.jpg?t=1765901878" alt="Shelving Units">
+            <p>Shelving Units</p>
+          </a>
+
+          <a href="https://www.muji.eu/stationery/pens-and-pencils" class="highlight-card">
+            <img src="https://cdn11.bigcommerce.com/s-4b0oh2xvlj/images/stencil/original/image-manager/25aw-pens-pencils-864x864-01.jpg?t=1765899698" alt="Pens & Pencils">
+            <p>Pens &amp; Pencils</p>
+          </a>
+
+          <a href="https://www.muji.eu/travel" class="highlight-card">
+            <img src="https://cdn11.bigcommerce.com/s-4b0oh2xvlj/images/stencil/original/image-manager/25aw-travel-864x864-01.jpg?t=1765901204" alt="Travel">
+            <p>Travel</p>
+          </a>
+
+        </div>
+        </div>
       </div>
-    </div>
-    <div class="hightlights-carousel">
+    </section>
+    <section class="mini-carousel-feat">
 
-      <a href="/stationery/organisation/diaries-planners-and-calendars" class="card">
-        <img src="https://cdn11.bigcommerce.com/s-4b0oh2xvlj/images/stencil/original/image-manager/25aw-new-arrivals-diaries-781x1080-01.jpg" alt="2026 Diaries & Calendars">
-        <p>2026 Diaries &amp; Calendars</p>
-      </a>
+      <!-- controls -->
+      <input type="radio" name="hero" id="hero-1" checked>
+      <input type="radio" name="hero" id="hero-2">
 
-      <a href="/home/cooking-and-dining" class="highlight-card">
-        <img src="https://cdn11.bigcommerce.com/s-4b0oh2xvlj/images/stencil/original/image-manager/26ss-cooking-dining-freezer-bags-864x864-.jpg?t=1768237765" alt="Cooking & Dining">
-        <p>Cooking &amp; Dining</p>
-      </a>
+      <!-- SLIDE 1 -->
+      <div class="mini-slide slide-1">
+        <img class="desktop-only-mini"
+          src="https://cdn11.bigcommerce.com/s-4b0oh2xvlj/images/stencil/original/image-manager/26ss-hasami-tableware-1920x912-01.jpg">
+        <img class="mobile-only-mini"
+          src="https://cdn11.bigcommerce.com/s-4b0oh2xvlj/images/stencil/original/image-manager/26ss-hasami-tableware-864x1296-01.jpg">
 
-      <a href="/home/storage" class="highlight-card">
-        <img src="https://cdn11.bigcommerce.com/s-4b0oh2xvlj/images/stencil/original/image-manager/25aw-storage-864x864-01.jpg?t=1765902369" alt="Storage">
-        <p>Storage</p>
-      </a>
+        <div class="mini-slide-text mini-slide-01">
+          <h2 class="pagetitleheading-carousel text-shadow">Hasami Porcelain</h2>
+          <a class="bannerlinks" href="/home/cooking-and-dining/tableware">
+            <strong>Explore the collection<span class="text-arrow"> → </span></strong>
+          </a>
+        </div>
 
-      <a href="/home/utility/cleaning" class="highlight-card">
-        <img src="https://cdn11.bigcommerce.com/s-4b0oh2xvlj/images/stencil/original/image-manager/cleaning-system-1920x1080-.jpg" alt="Cleaning System" style="object-position:20% 20%">
-        <p>Cleaning System</p>
-      </a>
+        <label for="hero-2" class="mini-slide-arrow right-arrow">›</label>
+      </div>
 
-      <a href="/furniture/shelving-units" class="highlight-card">
-        <img src="https://cdn11.bigcommerce.com/s-4b0oh2xvlj/images/stencil/original/image-manager/25aw-shelving-unit-864x864-01.jpg?t=1765901878" alt="Shelving Units">
-        <p>Shelving Units</p>
-      </a>
+      <!-- SLIDE 2 -->
+      <div class="mini-slide slide-2">
+        <img class="desktop-only-mini"
+          src="https://cdn11.bigcommerce.com/s-4b0oh2xvlj/images/stencil/original/image-manager/25aw-winter-essentials-main-1920x912.jpg">
+        <img class="mobile-only-mini"
+          src="https://cdn11.bigcommerce.com/s-4b0oh2xvlj/images/stencil/original/image-manager/25aw-winter-essentials-main-864x1296-.jpg">
 
-      <a href="/stationery/pens-and-pencils" class="highlight-card">
-        <img src="https://cdn11.bigcommerce.com/s-4b0oh2xvlj/images/stencil/original/image-manager/25aw-pens-pencils-864x864-01.jpg?t=1765899698" alt="Pens & Pencils">
-        <p>Pens &amp; Pencils</p>
-      </a>
+        <div class="mini-slide-text mini-slide-01">
+          <h2 class="pagetitleheading-carousel text-shadow">Winter Essentials</h2>
+          <a class="bannerlinks" href="/women/essentials"><strong>Women<span class="text-arrow"> → </span></strong></a>
+          <a class="bannerlinks" href="/men/essentials"><strong>Men<span class="text-arrow"> → </span></strong></a>
+        </div>
 
-      <a href="/travel" class="highlight-card">
-        <img src="https://cdn11.bigcommerce.com/s-4b0oh2xvlj/images/stencil/original/image-manager/25aw-travel-864x864-01.jpg?t=1765901204" alt="Travel">
-        <p>Travel</p>
-      </a>
+        <label for="hero-1" class="mini-slide-arrow left-arrow">‹</label>
+      </div>
 
-    </div>
-    </div>
-  </div>
+      <!-- indicator -->
+      <div class="mini-slide-indicator">
+        <label for="hero-1">01</label>
+        <label for="hero-2">02</label>
+      </div>
+
+    </section>
+
+
   </body>
 </html>
 

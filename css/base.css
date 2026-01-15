@@ -1,0 +1,10 @@
+body {
+  margin: 0;
+  font-family:Avenir Next, Helvetica, Arial, sans-serif;
+  color: #3c3b3b;
+}
+
+svg{
+  height:18px;
+  width:18px;
+}

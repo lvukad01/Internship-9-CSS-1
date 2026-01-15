@@ -1,0 +1,32 @@
+.highlights {
+  padding: 2rem 0;
+}
+
+.highlights-header {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 56px;
+  font-size: 20px;
+}
+
+.hightlights-carousel {
+  display: flex;
+  gap: 0;
+  padding-left: 56px;
+  overflow-x: scroll;
+}
+
+.hightlights-carousel a {
+  width: calc((100vw - 4.5rem) / 4);
+  text-decoration: none;
+}
+
+.hightlights-carousel img {
+  width: 360px;
+  height: 360px;
+  object-fit: cover;
+}
+
+.hightlights-carousel p {
+  font-weight: 600;
+}
