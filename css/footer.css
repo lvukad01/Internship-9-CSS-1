@@ -1,0 +1,132 @@
+.muji-footer {
+  background-color:rgb(60, 60, 67);
+  color: #fff;
+  font-family: Arial, sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.4;
+  padding: 4rem 2rem;
+}
+.footer-wrapper {
+  max-width: 1370px;
+  margin: 0 auto;
+}
+.footer-columns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+.footer-column {
+  flex: 1 1 200px;
+  min-width: 180px;
+}
+.footer-column h4 {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+.footer-column p {
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+}
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer-column ul li {
+  margin-bottom: 0.4rem;
+}
+.footer-column ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.footer-column ul li a:hover {
+  color: #e60012; /* MUJI red */
+}
+.newsletter-column .form-group {
+  display: flex;
+  margin-top: 0.5rem;
+}
+.newsletter-column input[type="email"] {
+  flex: 1;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px 0 0 4px;
+  font-size: 0.875rem;
+}
+.newsletter-column button {
+  background-color: #e60012;
+  border: none;
+  padding: 0 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+}
+.newsletter-column button svg {
+  fill: #fff;
+}
+.footer-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  border-top: 1px solid #333;
+  padding-top: 1rem;
+}
+.footer-bottom .footer-logo img {
+  width: 64px;
+  height: 64px;
+}
+.footer-bottom p {
+  margin: 0;
+  font-size: 0.875rem;
+  color: #ccc;
+}
+
+/* Social links styling */
+.social-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+.social-links a {
+  color: #fff;
+  text-decoration: none;
+}
+.social-links a:hover {
+  color: #e60012;
+}
+
+/* Buttons for sustainability */
+.btn-link {
+  display: inline-block;
+  margin-top: 0.25rem;
+  color: #e60012;
+  text-decoration: none;
+  font-weight: 600;
+}
+.btn-link:hover {
+  text-decoration: underline;
+}
+
+/* Responsiveness */
+@media (max-width: 1024px) {
+  .footer-columns {
+    flex-direction: column;
+  }
+  .newsletter-column .form-group {
+    flex-direction: column;
+  }
+  .newsletter-column input[type="email"], .newsletter-column button {
+    width: 100%;
+    border-radius: 4px;
+  }
+  .newsletter-column button {
+    margin-top: 0.5rem;
+  }
+}

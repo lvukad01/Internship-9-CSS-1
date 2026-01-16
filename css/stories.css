@@ -1,137 +1,131 @@
-/* Sakrij radio inpute */
-.muji-stories-section input {
+/* RESET */
+.muji-stories input {
   display: none;
 }
 
-/* Glavni container */
-.muji-stories-section {
+.muji-stories {
   max-width: 1370px;
   margin: 4rem auto;
-  padding: 0 68px;
+  padding-left: 68px;
+  padding-right: 68px;
 }
 
-.muji-stories-section h2 {
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
+.muji-stories h2 {
+  font-size: 18px;
+  margin-bottom: 12px;
   font-weight: 600;
 }
 
-/* Slider container */
-.muji-slider {
+/* CAROUSEL */
+.muji-carousel {
   position: relative;
-  overflow: hidden;
-  min-height: 350px;
+  min-height: 420px;
 }
 
-/* Container koji drži sve storije */
-.slides-container {
-  display: flex;
+/* PAGE */
+.muji-page {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: 1.5rem;
-  transition: transform 0.35s ease;
-  width: 100%; /* 100% width = viewport */
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .35s ease;
 }
 
-/* Svaka storija */
+/* PAGE VISIBILITY */
+#p1:checked ~ .muji-carousel .page-1,
+#p2:checked ~ .muji-carousel .page-2,
+#p3:checked ~ .muji-carousel .page-3,
+#p4:checked ~ .muji-carousel .page-4,
+#p5:checked ~ .muji-carousel .page-5 {
+  opacity: 1;
+  visibility: visible;
+  z-index: 5;
+}
+
+/* STORY CARD */
 .story-card {
-  flex: 0 0 25%; /* 4 storije po stranici */
   background: #fff;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-  cursor: pointer;
 }
 
-.product-image img {
+.story-card a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.story-image img {
   width: 100%;
-  height: 180px;
+  height: 200px;
   object-fit: cover;
+}
+.muji-carousel {
+  position: relative !important;
 }
 
 .story-content {
-  padding: 0.5rem;
+  padding: 12px;
 }
 
 .story-content h3 {
   font-size: 1rem;
-  margin-bottom: 0.3rem;
+  margin-bottom: 6px;
   font-weight: 600;
 }
 
 .story-content p {
-  font-size: 0.85rem;
-  color: #555;
+  font-size: .85rem;
   line-height: 1.3;
+  color: #555;
 }
 
-/* Strelice */
-.products-arrow {
+/* ARROWS */
+.muji-arrows {
   position: absolute;
-  top: 50%;
+  inset: 0;
+  pointer-events: none;
+}
+
+.muji-arrow {
+  position: absolute;
+  top: 45%;
   transform: translateY(-50%);
-  background: rgba(33,33,33,0.55);
+  background: rgba(33,33,33,.55);
   color: #fff;
-  font-size: 2rem;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  font-size: 3rem;
+  padding: .3rem 1rem;
   cursor: pointer;
-  border-radius: 50%;
-  z-index: 10;
+  z-index: 20;
+  user-select: none;
+  pointer-events: all;
 }
 
-.products-arrow.left { left: 0; }
-.products-arrow.right { right: 0; }
+.muji-arrow.left { left: 0; }
+.muji-arrow.right { right: 0; }
 
-/* Pomicanje slides-container po stranici (4 storije po stranici) */
-#page1:checked ~ .muji-slider .slides-container { transform: translateX(0%); }
-#page2:checked ~ .muji-slider .slides-container { transform: translateX(-100%); }
-#page3:checked ~ .muji-slider .slides-container { transform: translateX(-200%); }
-#page4:checked ~ .muji-slider .slides-container { transform: translateX(-300%); }
-#page5:checked ~ .muji-slider .slides-container { transform: translateX(-400%); }
-
-/* Pagination */
-.pagination {
-  display: flex;
-  justify-content: center;
-  margin-top: 1rem;
-  gap: 0.5rem;
-}
-
-.pagination label {
-  width: 12px;
-  height: 12px;
-  background: #ccc;
-  border-radius: 50%;
-  cursor: pointer;
-}
-
-#page1:checked ~ .pagination label[for="page1"],
-#page2:checked ~ .pagination label[for="page2"],
-#page3:checked ~ .pagination label[for="page3"],
-#page4:checked ~ .pagination label[for="page4"],
-#page5:checked ~ .pagination label[for="page5"] {
-  background: #333;
-}
-
-/* Responsivnost */
+/* RESPONSIVE */
 @media (max-width: 1024px) {
-  .story-card { flex: 0 0 50%; } /* 2 storije po stranici */
-  .product-image img { height: 160px; }
+  .muji-page {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
-@media (max-width: 600px) {
-  .slides-container { 
-    display: flex; 
-    overflow-x: auto; 
-    scroll-snap-type: x mandatory; 
-    gap: 1rem;
-    padding-left: 1rem;
+@media (max-width: 764px) {
+  .muji-page {
+    position: relative;
+    grid-template-columns: 1fr;
   }
-  .story-card { 
-    flex: 0 0 80%; 
-    scroll-snap-align: start; 
+
+  .muji-carousel {
+    min-height: auto;
   }
-  .products-arrow { display: none; }
+
+  .muji-arrow {
+    display: none;
+  }
 }
