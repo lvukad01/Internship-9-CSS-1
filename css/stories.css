@@ -1,58 +1,62 @@
-/* RESET */
 .muji-stories input {
   display: none;
 }
 
 .muji-stories {
   max-width: 1370px;
+  height:650px;
   margin: 4rem auto;
-  padding-left: 68px;
-  padding-right: 68px;
+  padding-left: 100px;
+  padding-right: 100px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .muji-stories h2 {
-  font-size: 18px;
-  margin-bottom: 12px;
+  font-size: 1.125rem; 
+  margin-bottom: 1rem;
   font-weight: 600;
+  color: rgb(60,60,67);
 }
 
-/* CAROUSEL */
 .muji-carousel {
   position: relative;
   min-height: 420px;
 }
 
-/* PAGE */
 .muji-page {
   position: absolute;
+  height:650px;
   inset: 0;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1.5rem;
   opacity: 0;
   visibility: hidden;
-  transition: opacity .35s ease;
+  transition: opacity 0.35s ease, transform 0.35s ease;
 }
 
-/* PAGE VISIBILITY */
-#p1:checked ~ .muji-carousel .page-1,
-#p2:checked ~ .muji-carousel .page-2,
-#p3:checked ~ .muji-carousel .page-3,
-#p4:checked ~ .muji-carousel .page-4,
-#p5:checked ~ .muji-carousel .page-5 {
+#s1:checked ~ .muji-carousel .page-1,
+#s2:checked ~ .muji-carousel .page-2,
+#s3:checked ~ .muji-carousel .page-3,
+#s4:checked ~ .muji-carousel .page-4,
+#s5:checked ~ .muji-carousel .page-5 {
   opacity: 1;
   visibility: visible;
   z-index: 5;
 }
 
-/* STORY CARD */
 .story-card {
   background: #fff;
-  border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
+.story-card:hover h3{
+    color:#8b0000;
+}
+.story-card:hover p{
+    color:#8b0000;
+}
 .story-card a {
   text-decoration: none;
   color: inherit;
@@ -61,30 +65,31 @@
 
 .story-image img {
   width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-.muji-carousel {
-  position: relative !important;
+  height: 400px;
+  object-fit: cover; 
+  object-position: center center; 
+  transition: transform 0.25s ease;
 }
 
+
 .story-content {
-  padding: 12px;
+  padding: 14px;
 }
 
 .story-content h3 {
-  font-size: 1rem;
+  font-size: 16px;
   margin-bottom: 6px;
   font-weight: 600;
+  color: rgb(60,60,67);
 }
 
 .story-content p {
-  font-size: .85rem;
-  line-height: 1.3;
-  color: #555;
+  align-content:left;
+  font-size: 16px;
+  line-height: 1.6rem;
+  color: rgb(60,60,67);
 }
 
-/* ARROWS */
 .muji-arrows {
   position: absolute;
   inset: 0;
@@ -93,22 +98,22 @@
 
 .muji-arrow {
   position: absolute;
-  top: 45%;
+  top: 50%;
   transform: translateY(-50%);
-  background: rgba(33,33,33,.55);
+  background: rgba(33,33,33,0.55);
   color: #fff;
-  font-size: 3rem;
-  padding: .3rem 1rem;
+  font-size: 2.5rem;
+  padding: 0.3rem 1rem;
   cursor: pointer;
   z-index: 20;
   user-select: none;
   pointer-events: all;
+  border-radius: 4px;
 }
 
 .muji-arrow.left { left: 0; }
 .muji-arrow.right { right: 0; }
 
-/* RESPONSIVE */
 @media (max-width: 1024px) {
   .muji-page {
     grid-template-columns: repeat(2, 1fr);

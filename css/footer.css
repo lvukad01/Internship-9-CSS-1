@@ -1,8 +1,8 @@
 .muji-footer {
   background-color:rgb(60, 60, 67);
   color: #fff;
-  font-family: Arial, sans-serif;
-  font-size: 0.875rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
   line-height: 1.4;
   padding: 4rem 2rem;
 }
@@ -23,7 +23,7 @@
 .footer-column h4 {
   font-weight: 600;
   margin-bottom: 0.5rem;
-  font-size: 1rem;
+  font-size: 22px;
 }
 .footer-column p {
   font-size: 0.85rem;
