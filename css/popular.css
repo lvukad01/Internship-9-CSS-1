@@ -30,8 +30,18 @@
   visibility: hidden;
   transition: opacity .35s ease;
 }
-.product-card .products-arrow{
-    display: none;
+.product-card .products-arrow {
+    position: absolute;
+    top: 45%;
+    transform: translateY(-50%);
+    background: rgba(33,33,33,.55);
+    color: #fff;
+    font-size: 3rem;
+    padding: .3rem 1rem;
+    cursor: pointer;
+    z-index: 20;
+    user-select: none;
+    /* display: none; <-- makni ovo */
 }
 #p1:checked ~ .products-carousel .page-1,
 #p2:checked ~ .products-carousel .page-2,
