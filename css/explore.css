@@ -42,7 +42,7 @@
 .hovertext {
   position: absolute;
   bottom: 1.2rem;
-  left: 8%; /* poravnanje sa padding-left diva */
+  left: 8%; 
   color: #fff;
   font-weight: bold;
   font-size: clamp(1rem, 1vmax, 1.1rem);
@@ -66,28 +66,10 @@
   transform: scaleX(1);
 }
 
-/* Remove underline from links */
 .grid-layout-best-sellers a {
   text-decoration: none;
 }
 
-/* Responsive adjustments */
-@media screen and (max-width: 764px) {
-  .explore-best-sellers {
-    padding-left: 5%;
-    padding-right: 5%;
-  }
-  .grid-layout-best-sellers {
-    grid-template-columns: 1fr;
-    gap: 0.5rem;
-  }
-  .hovertext {
-    bottom: 0.6rem;
-    left: 5%;
-    text-align: center;
-    width: 360px;
-  }
-}
 
 
 

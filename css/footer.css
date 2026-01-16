@@ -43,7 +43,8 @@
   transition: color 0.2s;
 }
 .footer-column ul li a:hover {
-  color: #e60012; /* MUJI red */
+  color: white; 
+  text-decoration: underline;
 }
 .newsletter-column .form-group {
   display: flex;
@@ -88,7 +89,6 @@
   color: #ccc;
 }
 
-/* Social links styling */
 .social-links {
   display: flex;
   gap: 1rem;
@@ -99,14 +99,13 @@
   text-decoration: none;
 }
 .social-links a:hover {
-  color: #e60012;
+  color: white;
 }
 
-/* Buttons for sustainability */
 .btn-link {
   display: inline-block;
   margin-top: 0.25rem;
-  color: #e60012;
+  color: white;
   text-decoration: none;
   font-weight: 600;
 }
@@ -114,19 +113,3 @@
   text-decoration: underline;
 }
 
-/* Responsiveness */
-@media (max-width: 1024px) {
-  .footer-columns {
-    flex-direction: column;
-  }
-  .newsletter-column .form-group {
-    flex-direction: column;
-  }
-  .newsletter-column input[type="email"], .newsletter-column button {
-    width: 100%;
-    border-radius: 4px;
-  }
-  .newsletter-column button {
-    margin-top: 0.5rem;
-  }
-}

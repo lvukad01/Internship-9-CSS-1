@@ -212,4 +212,78 @@
   .mini-slide-arrow{
     display: none;
   }
+  .explore-best-sellers {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .grid-layout-best-sellers {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+  .hovertext {
+    bottom: 0.6rem;
+    left: 5%;
+    text-align: center;
+    width: 360px;
+  }
+@media (max-width: 764px) {
+  .muji-page {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    height:460px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 1rem;
+    grid-template-columns: unset;
+  }
+  .muji-stories{
+    padding-left:30px;
+    padding-right: 5px;
+  }
+  .muji-page::-webkit-scrollbar {
+    display: none; 
+  }
+  .muji-stories h3{
+    font-size: 16px;
+  }
+  .muji-stories p{
+    line-height: 1.2;
+    font-size: 12px;
+  }
+  .story-card {
+    flex: 0 0 90%; 
+    scroll-snap-align: start;
+  }
+
+  .muji-carousel {
+    min-height: auto;
+  }
+
+  .muji-arrow {
+    display: none; 
+  }
+
+
+.story-image img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover; 
+  object-position: center center; 
+  transition: transform 0.25s ease;
+}
+}
+  .footer-columns {
+    flex-direction: column;
+  }
+  .newsletter-column .form-group {
+    flex-direction: column;
+  }
+  .newsletter-column input[type="email"], .newsletter-column button {
+    width: 100%;
+    border-radius: 4px;
+  }
+  .newsletter-column button {
+    margin-top: 0.5rem;
+  }
 }
