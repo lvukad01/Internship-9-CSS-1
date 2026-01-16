@@ -176,6 +176,32 @@
     letter-spacing: 1px;
     text-shadow: 0 2px 8px rgba(0,0,0,0.6);
   }
+
+  .products-page {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 1rem;
+    grid-template-columns: unset;
+    min-height: auto;
+  }
+
+  .products-page::-webkit-scrollbar {
+    display: none;
+  }
+
+  .product-card {
+    flex: 0 0 80%;
+    scroll-snap-align: start;
+  }
+
+  .products-arrow {
+    display: none;
+  }
+
+
   .highlights-header {
     padding-left: 20px;
   }
@@ -195,6 +221,25 @@
   display: block;
   transition: transform 0.4s ease;
  }
+  .products-page {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .products-page {
+    grid-template-columns: 1fr;
+  }
+    .products-carousel {
+    min-height: auto;
+  }
+
+  .products-page {
+    position: relative;
+  }
+    .products-page {
+    grid-template-columns: 1fr;
+  }
+
+
 
   .mini-carousel-feat { aspect-ratio: 3 / 4; }
 
@@ -226,7 +271,6 @@
     text-align: center;
     width: 360px;
   }
-@media (max-width: 764px) {
   .muji-page {
     position: relative;
     display: flex;
@@ -272,7 +316,7 @@
   object-position: center center; 
   transition: transform 0.25s ease;
 }
-}
+
   .footer-columns {
     flex-direction: column;
   }
